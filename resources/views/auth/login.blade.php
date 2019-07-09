@@ -1,67 +1,48 @@
-@extends('layouts.app')
+@extends('auth.contenido')
 
-@section('content')
-<div class="container">
+@section('login')
+ <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header">{{ __('Inicio de Sesion') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                    <form method="POST" action="{{ route('login') }}" class="was-validated" >
+                      {{csrf_field()}}
+                       
+                        <div class="form-group row mb-3{{$errors->has('usuario' ? 'is-invalid' : '')}}">
+                            <label for="usuario" class="col-md-4 col-form-label text-md-right">{{ __('Nombre de Usuario') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                <input id="usuario" type="text" class="form-control" name="usuario" value="{{ old('usuario') }}" required  autofocus>
+                            {!!$errors->first('usuario','<span class="invalid-feedback">:message</span>')!!}
+                                
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                        <div class="form-group row mb-4{{$errors->has('password' ? 'is-invalid' : '')}}">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>
 
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control" name="password" required >
+                                 {!!$errors->first('password','<span class="invalid-feedback">:message</span>')!!}
                             </div>
                         </div>
+<!-----<center>Usuario: jcarlosad7 Password: *jucardi7<br>
 
+Usuario: almacenero password: almacenero<br>
+
+Usuario: vendedor password:vendedor<br>----->
+                      Ejemplos de Prueba<br>
+                    *Administrador*  Usuario:admin password:admin <br>
+                      *Contacto Principal*  Usuario:admin2 password:admin</center>
+  
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
+                                    Acceder
                                 </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
                             </div>
                         </div>
                     </form>
@@ -69,5 +50,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> 
 @endsection

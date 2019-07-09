@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -11,12 +12,7 @@ window.onerror=silentErrorHandler;
 </SCRIPT>-->
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-7887568571979234",
-          enable_page_level_ads: true
-     });
-</script>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
@@ -418,8 +414,21 @@ window.onerror=silentErrorHandler;
             </div>
         </div>        
       <div class="app-main">
-      @include('plantilla.sidebar')
+        
+        
+        @if(Auth::check())
+          @if(Auth::user()->idrol==1)
+            @include('plantilla.sidebarAdministrador')
+          @elseif(Auth::user()->idrol==2)
+            @include('plantilla.sidebarContactoPrincipal')
+          @else
+        
+          @endif
+        @endif
+        
+       
       <!----Aqui va el contenido principal----->
+         
       @yield('contenido')
       <!----Aqui va el contenido principal----->
         </div>

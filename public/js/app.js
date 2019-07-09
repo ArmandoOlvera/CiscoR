@@ -1936,1284 +1936,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -38507,8 +37229,514 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {}
-var staticRenderFns = []
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "app-main__outer" }, [
+      _c("div", { staticClass: "app-main__inner" }, [
+        _c("div", { staticClass: "app-page-title" }, [
+          _c("div", { staticClass: "page-title-wrapper" }, [
+            _c("div", { staticClass: "page-title-heading" }, [
+              _c("div", { staticClass: "page-title-icon" }, [
+                _c("i", {
+                  staticClass: "pe-7s-rocket icon-gradient bg-mean-fruit"
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _vm._v(
+                  "Tablero Principal \n                                        "
+                ),
+                _c("div", { staticClass: "page-title-subheading" }, [
+                  _vm._v(
+                    "Bienvenido al tablero principal.\n                                        "
+                  )
+                ])
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-6 col-xl-4" }, [
+            _c(
+              "div",
+              { staticClass: "card mb-3 widget-content bg-midnight-bloom" },
+              [
+                _c(
+                  "div",
+                  { staticClass: "widget-content-wrapper text-white" },
+                  [
+                    _c("div", { staticClass: "widget-content-left" }, [
+                      _c("div", { staticClass: "widget-heading" }, [
+                        _vm._v("Total Orders")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "widget-subheading" }, [
+                        _vm._v("Last year expenses")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "widget-content-right" }, [
+                      _c("div", { staticClass: "widget-numbers text-white" }, [
+                        _c("span", [_vm._v("1896")])
+                      ])
+                    ])
+                  ]
+                )
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6 col-xl-4" }, [
+            _c(
+              "div",
+              { staticClass: "card mb-3 widget-content bg-arielle-smile" },
+              [
+                _c(
+                  "div",
+                  { staticClass: "widget-content-wrapper text-white" },
+                  [
+                    _c("div", { staticClass: "widget-content-left" }, [
+                      _c("div", { staticClass: "widget-heading" }, [
+                        _vm._v("Clients")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "widget-subheading" }, [
+                        _vm._v("Total Clients Profit")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "widget-content-right" }, [
+                      _c("div", { staticClass: "widget-numbers text-white" }, [
+                        _c("span", [_vm._v("$ 568")])
+                      ])
+                    ])
+                  ]
+                )
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6 col-xl-4" }, [
+            _c(
+              "div",
+              { staticClass: "card mb-3 widget-content bg-grow-early" },
+              [
+                _c(
+                  "div",
+                  { staticClass: "widget-content-wrapper text-white" },
+                  [
+                    _c("div", { staticClass: "widget-content-left" }, [
+                      _c("div", { staticClass: "widget-heading" }, [
+                        _vm._v("Followers")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "widget-subheading" }, [
+                        _vm._v("People Interested")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "widget-content-right" }, [
+                      _c("div", { staticClass: "widget-numbers text-white" }, [
+                        _c("span", [_vm._v("46%")])
+                      ])
+                    ])
+                  ]
+                )
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "d-xl-none d-lg-block col-md-6 col-xl-4" }, [
+            _c(
+              "div",
+              { staticClass: "card mb-3 widget-content bg-premium-dark" },
+              [
+                _c(
+                  "div",
+                  { staticClass: "widget-content-wrapper text-white" },
+                  [
+                    _c("div", { staticClass: "widget-content-left" }, [
+                      _c("div", { staticClass: "widget-heading" }, [
+                        _vm._v("Products Sold")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "widget-subheading" }, [
+                        _vm._v("Revenue streams")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "widget-content-right" }, [
+                      _c(
+                        "div",
+                        { staticClass: "widget-numbers text-warning" },
+                        [_c("span", [_vm._v("$14M")])]
+                      )
+                    ])
+                  ]
+                )
+              ]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-6 col-xl-4" }, [
+            _c("div", { staticClass: "card mb-3 widget-content" }, [
+              _c("div", { staticClass: "widget-content-outer" }, [
+                _c("div", { staticClass: "widget-content-wrapper" }, [
+                  _c("div", { staticClass: "widget-content-left" }, [
+                    _c("div", { staticClass: "widget-heading" }, [
+                      _vm._v("Total Orders")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "widget-subheading" }, [
+                      _vm._v("Last year expenses")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "widget-content-right" }, [
+                    _c("div", { staticClass: "widget-numbers text-success" }, [
+                      _vm._v("1896")
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6 col-xl-4" }, [
+            _c("div", { staticClass: "card mb-3 widget-content" }, [
+              _c("div", { staticClass: "widget-content-outer" }, [
+                _c("div", { staticClass: "widget-content-wrapper" }, [
+                  _c("div", { staticClass: "widget-content-left" }, [
+                    _c("div", { staticClass: "widget-heading" }, [
+                      _vm._v("Products Sold")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "widget-subheading" }, [
+                      _vm._v("Revenue streams")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "widget-content-right" }, [
+                    _c("div", { staticClass: "widget-numbers text-warning" }, [
+                      _vm._v("$3M")
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6 col-xl-4" }, [
+            _c("div", { staticClass: "card mb-3 widget-content" }, [
+              _c("div", { staticClass: "widget-content-outer" }, [
+                _c("div", { staticClass: "widget-content-wrapper" }, [
+                  _c("div", { staticClass: "widget-content-left" }, [
+                    _c("div", { staticClass: "widget-heading" }, [
+                      _vm._v("Followers")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "widget-subheading" }, [
+                      _vm._v("People Interested")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "widget-content-right" }, [
+                    _c("div", { staticClass: "widget-numbers text-danger" }, [
+                      _vm._v("45,9%")
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "d-xl-none d-lg-block col-md-6 col-xl-4" }, [
+            _c("div", { staticClass: "card mb-3 widget-content" }, [
+              _c("div", { staticClass: "widget-content-outer" }, [
+                _c("div", { staticClass: "widget-content-wrapper" }, [
+                  _c("div", { staticClass: "widget-content-left" }, [
+                    _c("div", { staticClass: "widget-heading" }, [
+                      _vm._v("Income")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "widget-subheading" }, [
+                      _vm._v("Expected totals")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "widget-content-right" }, [
+                    _c("div", { staticClass: "widget-numbers text-focus" }, [
+                      _vm._v("$147")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "widget-progress-wrapper" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "progress-bar-sm progress-bar-animated-alt progress"
+                    },
+                    [
+                      _c("div", {
+                        staticClass: "progress-bar bg-info",
+                        staticStyle: { width: "54%" },
+                        attrs: {
+                          role: "progressbar",
+                          "aria-valuenow": "54",
+                          "aria-valuemin": "0",
+                          "aria-valuemax": "100"
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "progress-sub-label" }, [
+                    _c("div", { staticClass: "sub-label-left" }, [
+                      _vm._v("Expenses")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "sub-label-right" }, [
+                      _vm._v("100%")
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-6 col-lg-3" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "card-shadow-danger mb-3 widget-chart widget-chart2 text-left card"
+              },
+              [
+                _c("div", { staticClass: "widget-content" }, [
+                  _c("div", { staticClass: "widget-content-outer" }, [
+                    _c("div", { staticClass: "widget-content-wrapper" }, [
+                      _c(
+                        "div",
+                        { staticClass: "widget-content-left pr-2 fsize-1" },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "widget-numbers mt-0 fsize-3 text-danger"
+                            },
+                            [_vm._v("71%")]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "widget-content-right w-100" }, [
+                        _c("div", { staticClass: "progress-bar-xs progress" }, [
+                          _c("div", {
+                            staticClass: "progress-bar bg-danger",
+                            staticStyle: { width: "71%" },
+                            attrs: {
+                              role: "progressbar",
+                              "aria-valuenow": "71",
+                              "aria-valuemin": "0",
+                              "aria-valuemax": "100"
+                            }
+                          })
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "widget-content-left fsize-1" }, [
+                      _c("div", { staticClass: "text-muted opacity-6" }, [
+                        _vm._v("Income Target")
+                      ])
+                    ])
+                  ])
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6 col-lg-3" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "card-shadow-success mb-3 widget-chart widget-chart2 text-left card"
+              },
+              [
+                _c("div", { staticClass: "widget-content" }, [
+                  _c("div", { staticClass: "widget-content-outer" }, [
+                    _c("div", { staticClass: "widget-content-wrapper" }, [
+                      _c(
+                        "div",
+                        { staticClass: "widget-content-left pr-2 fsize-1" },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "widget-numbers mt-0 fsize-3 text-success"
+                            },
+                            [_vm._v("54%")]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "widget-content-right w-100" }, [
+                        _c("div", { staticClass: "progress-bar-xs progress" }, [
+                          _c("div", {
+                            staticClass: "progress-bar bg-success",
+                            staticStyle: { width: "54%" },
+                            attrs: {
+                              role: "progressbar",
+                              "aria-valuenow": "54",
+                              "aria-valuemin": "0",
+                              "aria-valuemax": "100"
+                            }
+                          })
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "widget-content-left fsize-1" }, [
+                      _c("div", { staticClass: "text-muted opacity-6" }, [
+                        _vm._v("Expenses Target")
+                      ])
+                    ])
+                  ])
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6 col-lg-3" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "card-shadow-warning mb-3 widget-chart widget-chart2 text-left card"
+              },
+              [
+                _c("div", { staticClass: "widget-content" }, [
+                  _c("div", { staticClass: "widget-content-outer" }, [
+                    _c("div", { staticClass: "widget-content-wrapper" }, [
+                      _c(
+                        "div",
+                        { staticClass: "widget-content-left pr-2 fsize-1" },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "widget-numbers mt-0 fsize-3 text-warning"
+                            },
+                            [_vm._v("32%")]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "widget-content-right w-100" }, [
+                        _c("div", { staticClass: "progress-bar-xs progress" }, [
+                          _c("div", {
+                            staticClass: "progress-bar bg-warning",
+                            staticStyle: { width: "32%" },
+                            attrs: {
+                              role: "progressbar",
+                              "aria-valuenow": "32",
+                              "aria-valuemin": "0",
+                              "aria-valuemax": "100"
+                            }
+                          })
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "widget-content-left fsize-1" }, [
+                      _c("div", { staticClass: "text-muted opacity-6" }, [
+                        _vm._v("Spendings Target")
+                      ])
+                    ])
+                  ])
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6 col-lg-3" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "card-shadow-info mb-3 widget-chart widget-chart2 text-left card"
+              },
+              [
+                _c("div", { staticClass: "widget-content" }, [
+                  _c("div", { staticClass: "widget-content-outer" }, [
+                    _c("div", { staticClass: "widget-content-wrapper" }, [
+                      _c(
+                        "div",
+                        { staticClass: "widget-content-left pr-2 fsize-1" },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "widget-numbers mt-0 fsize-3 text-info"
+                            },
+                            [_vm._v("89%")]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "widget-content-right w-100" }, [
+                        _c("div", { staticClass: "progress-bar-xs progress" }, [
+                          _c("div", {
+                            staticClass: "progress-bar bg-info",
+                            staticStyle: { width: "89%" },
+                            attrs: {
+                              role: "progressbar",
+                              "aria-valuenow": "89",
+                              "aria-valuemin": "0",
+                              "aria-valuemax": "100"
+                            }
+                          })
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "widget-content-left fsize-1" }, [
+                      _c("div", { staticClass: "text-muted opacity-6" }, [
+                        _vm._v("Totals Target")
+                      ])
+                    ])
+                  ])
+                ])
+              ]
+            )
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
 
 
 
