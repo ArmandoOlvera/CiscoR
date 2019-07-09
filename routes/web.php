@@ -30,7 +30,7 @@ Route::group(['middleware'=>['auth']],function(){
 
 
   Route::get('/logout','Auth\LoginController@logout')->name('logout');
-
+Route::post('/logout','Auth\LoginController@logout')->name('logout');
   ///Rutas que solo puede acceder el Administrador
   Route::group(['middleware'=>['Administrador']],function(){
     

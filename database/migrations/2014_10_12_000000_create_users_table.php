@@ -23,13 +23,14 @@ class CreateUsersTable extends Migration
             $table->timestamps();
         }); 
       //Se crea la tabla usuario
-      Schema::create('usuario', function (Blueprint $table) {
+      Schema::create('users', function (Blueprint $table) {
           // $table->increments('idusuario');   
           $table->increments('id');
           $table->integer('idrol')->unsigned()->nullable();
          $table->string('nombre',100);
            $table->string('telefono',20);
             $table->string('email',50);
+        $table->string('usuario')->unique();;
           $table->string('password',64);
           $table->boolean('condicion')->default(1);
           $table->timestamps(); 
@@ -44,7 +45,7 @@ class CreateUsersTable extends Migration
            $table->string('direccion',60); 
           $table->boolean('condicion')->default(1);
           $table->timestamps(); 
-          $table->foreign('id_usuario')->references('id')->on('usuario')->onDelete('cascade');
+          $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
         });
      
       //se crea la tabla de instructores

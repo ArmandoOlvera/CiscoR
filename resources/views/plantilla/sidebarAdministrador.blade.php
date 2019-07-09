@@ -36,8 +36,8 @@
                                 <li  class="app-sidebar__heading">Inicio</li>
                                 <li @click="menu=0">
                                     <a  class="mm-active">
-                                        <i class="metismenu-icon pe-7s-rocket"></i>
-                                        Dashboard Administrador
+                                        <i class="metismenu-icon pe-7s-display1"></i>
+                                       Tablero Principal
                                     </a>
                                 </li>
                                <!---- <li class="app-sidebar__heading">Tablero2</li>

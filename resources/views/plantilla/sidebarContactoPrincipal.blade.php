@@ -36,8 +36,8 @@
                                 <li  class="app-sidebar__heading">Inicio</li>
                                 <li @click="menu=0">
                                     <a  class="mm-active">
-                                        <i class="metismenu-icon pe-7s-rocket"></i>
-                                        Dashboard Contacto Principal
+                                        <i class="metismenu-icon pe-7s-display1"></i>
+Tablero Principal
                                     </a>
                                 </li>
                                <!---- <li class="app-sidebar__heading">Tablero2</li>
@@ -173,24 +173,7 @@
                                         </li>
                                     </ul>
                                 </li>----->
-                               <li @click="menu=1"  >
-                                    <a  >
-                                        <i class="metismenu-icon pe-7s-user"></i>
-                                        Usuarios
-                                    </a>
-                                </li>
-                               <li @click="menu=2"  >
-                                     <a  >
-                                        <i class="metismenu-icon pe-7s-user"></i>
-                                        Roles
-                                 </a>
-                                </li>
-                              <li @click="menu=3" >
-                                    <a  >
-                                        <i class="metismenu-icon pe-7s-home"></i>
-                                        Academias
-                                  </a>
-                                </li>
+                              
                               <li   @click="menu=4">
                                      <a  >
                                         <i class="metismenu-icon pe-7s-users"></i>
@@ -203,24 +186,14 @@
                                         Instructores
                                    </a>
                                 </li>
-                              <li  @click="menu=6">
-                                     <a  >
-                                        <i class="metismenu-icon pe-7s-portfolio"></i>
-                                        Materias
-                                  </a>
-                                </li>
+                             
                               <li  @click="menu=7">
                                     <a  >
                                         <i class="metismenu-icon pe-7s-study"></i>
                                         Alumnos
                                   </a>
                                 </li>
-                              <li   >
-                                    <a href="{{url('logout')}}">
-                                        <i class="metismenu-icon pe-7s-study"></i>
-                                        Cerrar SEsion
-                                    </a>
-                                </li>
+                             
                              <!--- <li  >
                                     <a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                         <i class="metismenu-icon pe-7s-study"></i>
