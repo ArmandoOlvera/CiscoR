@@ -215,12 +215,7 @@
                                         Alumnos
                                   </a>
                                 </li>
-                              <li   >
-                                    <a href="{{url('logout')}}">
-                                        <i class="metismenu-icon pe-7s-study"></i>
-                                        Cerrar SEsion
-                                    </a>
-                                </li>
+                              
                              <!--- <li  >
                                     <a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                         <i class="metismenu-icon pe-7s-study"></i>

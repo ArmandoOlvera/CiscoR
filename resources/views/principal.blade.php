@@ -31,9 +31,13 @@ window.onerror=silentErrorHandler;
     =========================================================
     * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
     -->
-<link href="main.css" rel="stylesheet"></head>
-<body>
+<link href="main.css" rel="stylesheet">
+
+  </head>
+<body class=""  style="" >
     <div id="app">
+     <input id="nombre" name="nombre" type="text" value="{{Auth::user()->nombre}}">
+      <input id="id" name="id" type="text" value="{{Auth::user()->id}}">
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
         <div class="app-header header-shadow">
             <div class="app-header__logo">
@@ -492,5 +496,6 @@ window.onerror=silentErrorHandler;
 
 <script type="text/javascript" src="./assets/scripts/main.js"></script>
    <script src="js/app.js"></script>
+  
   </body>
 </html>

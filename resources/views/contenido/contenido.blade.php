@@ -9,9 +9,7 @@
            </template>
 
 <template v-if="menu==1">
-  <h1>
-    Usuarios ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-  </h1>
+  <usuarios-component></usuarios-component>
 </template>
 
 <template v-if="menu==2">

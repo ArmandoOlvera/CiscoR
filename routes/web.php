@@ -25,12 +25,13 @@ Route::group(['middleware'=>['auth']],function(){
   //Route::get('/','Auth\LoginController@showLoginForm');
  
       Route::get('/main', function () {
-          return view('contenido/contenido');
+          return view('contenido/contenido', [
+        'auth_user' => Auth::user()]);
       })->name('main');
+ 
 
-
-  Route::get('/logout','Auth\LoginController@logout')->name('logout');
-Route::post('/logout','Auth\LoginController@logout')->name('logout');
+ // Route::get('/logout','Auth\LoginController@logout')->name('logout');
+//Route::post('/logout','Auth\LoginController@logout')->name('logout');
   ///Rutas que solo puede acceder el Administrador
   Route::group(['middleware'=>['Administrador']],function(){
     
@@ -42,7 +43,8 @@ Route::post('/logout','Auth\LoginController@logout')->name('logout');
   
   
 });
-
+Route::get('/logout','Auth\LoginController@logout')->name('logout');
+Route::post('/logout','Auth\LoginController@logout')->name('logout');
 
 //Auth::routes();
 //Route::get('/home', 'HomeController@index')->name('home');
