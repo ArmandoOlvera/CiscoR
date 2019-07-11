@@ -36,6 +36,7 @@ class CreateUsersTable extends Migration
           $table->timestamps(); 
           $table->foreign('idrol')->references('id')->on('rol')->onDelete('cascade');
         });
+     
      //se crea la tabla de academia
       Schema::create('academia', function (Blueprint $table) {
           // $table->increments('idusuario');   
@@ -51,11 +52,14 @@ class CreateUsersTable extends Migration
       //se crea la tabla de instructores
      Schema::create('instructor', function (Blueprint $table) {
           $table->increments('id');
+          $table->integer('id_academia')->unsigned()->nullable();
           $table->string('nombre',100);
           $table->string('telefono',60);
           $table->string('email',60);
           $table->boolean('condicion')->default(1);
-          $table->timestamps();  
+          $table->timestamps(); 
+            $table->foreign('id_academia')->references('id')->on('academia')->onDelete('cascade');
+     
         });
      
       //se crea la tabla de materia
@@ -65,6 +69,25 @@ class CreateUsersTable extends Migration
           $table->boolean('condicion')->default(1);
           $table->timestamps();  
         });
+      //se crea la tabla de historial
+     Schema::create('historial', function (Blueprint $table) {
+          $table->increments('id');
+       $table->integer('id_academia')->unsigned()->nullable();
+          $table->integer('id_materia')->unsigned()->nullable();
+          $table->integer('id_instructor')->unsigned()->nullable();
+          $table->string('status',100);
+          $table->date('fecha_inicio');
+          $table->date('fecha_termino');
+          $table->boolean('condicion')->default(1);
+          $table->timestamps(); 
+       
+         $table->foreign('id_academia')->references('id')->on('academia')->onDelete('cascade');
+       $table->foreign('id_materia')->references('id')->on('materia')->onDelete('cascade');
+       $table->foreign('id_instructor')->references('id')->on('instructor')->onDelete('cascade');
+     
+       
+        });
+     /*
      //se crea la tabla de alumno
      Schema::create('alumno', function (Blueprint $table) {
           $table->increments('id');
@@ -94,7 +117,7 @@ class CreateUsersTable extends Migration
           $table->foreign('id_academia')->references('id')->on('academia')->onDelete('cascade');
        $table->foreign('id_materia')->references('id')->on('materia')->onDelete('cascade');
         });
-     
+     */
      
      
      

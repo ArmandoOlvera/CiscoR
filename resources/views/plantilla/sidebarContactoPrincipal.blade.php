@@ -177,24 +177,24 @@ Tablero Principal
                               <li   @click="menu=4">
                                      <a  >
                                         <i class="metismenu-icon pe-7s-users"></i>
-                                        Grupos
+                                        Resultados de cursos
                                     </a>
                                 </li>
-                              <li  @click="menu=5">
+                           <!---        <li  @click="menu=5">
                                    <a  >
                                         <i class="metismenu-icon pe-7s-headphones"></i>
                                         Instructores
                                    </a>
                                 </li>
                              
-                              <li  @click="menu=7">
+                          <li  @click="menu=7">
                                     <a  >
                                         <i class="metismenu-icon pe-7s-study"></i>
                                         Alumnos
                                   </a>
                                 </li>
                              
-                             <!--- <li  >
+                             <li  >
                                     <a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                         <i class="metismenu-icon pe-7s-study"></i>
                                         Cerrar Sesion

@@ -203,19 +203,19 @@
                                         Instructores
                                    </a>
                                 </li>
+                          <!---    <li  @click="menu=7">
                               <li  @click="menu=6">
                                      <a  >
                                         <i class="metismenu-icon pe-7s-portfolio"></i>
                                         Materias
                                   </a>
                                 </li>
-                              <li  @click="menu=7">
                                     <a  >
                                         <i class="metismenu-icon pe-7s-study"></i>
                                         Alumnos
                                   </a>
                                 </li>
-                              
+                              ---->
                              <!--- <li  >
                                     <a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                         <i class="metismenu-icon pe-7s-study"></i>

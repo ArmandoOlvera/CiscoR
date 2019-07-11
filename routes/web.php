@@ -25,24 +25,35 @@ Route::group(['middleware'=>['auth']],function(){
   //Route::get('/','Auth\LoginController@showLoginForm');
  
       Route::get('/main', function () {
-          return view('contenido/contenido', [
-        'auth_user' => Auth::user()]);
+          return view('contenido/contenido');
       })->name('main');
  
-
+// ESTOS CODIGOS SE 
  // Route::get('/logout','Auth\LoginController@logout')->name('logout');
 //Route::post('/logout','Auth\LoginController@logout')->name('logout');
   ///Rutas que solo puede acceder el Administrador
+  
+  /* POR AHORA ESTAN DESACTIVADAS LAS VALIDACIONES DEL TIPO DE USUARIO, SOLO SE ANALIZA SI ESTAN LOGEADOS O NO
   Route::group(['middleware'=>['Administrador']],function(){
-    
+      Route::get('/usuario', 'UsuariosController@index');
+      Route::post('/usuario/registrar', 'UsuariosController@store');
+      Route::put('/usuario/actualizar', 'UsuariosController@update');
+      Route::put('/usuario/desactivar', 'UsuariosController@desactivar');
+      Route::put('/usuario/activar', 'UsuariosController@activar');
   });
   //Rutas que solo puede acceder el COntactoPrincipal
   Route::group(['middleware'=>['ContactoPrincipal']],function(){
     
-  });
-  
-  
+  });*/
+  //Poner aqui los enlaces de los usuarios logeados!!
+    Route::get('/usuario', 'UsuariosController@index');
+    Route::post('/usuario/registrar', 'UsuariosController@store');
+      Route::put('/usuario/actualizar', 'UsuariosController@update');
+      Route::put('/usuario/desactivar', 'UsuariosController@desactivar');
+      Route::put('/usuario/activar', 'UsuariosController@activar');
 });
+
+//solo para debugear por ahora, quitar despues
 Route::get('/logout','Auth\LoginController@logout')->name('logout');
 Route::post('/logout','Auth\LoginController@logout')->name('logout');
 
