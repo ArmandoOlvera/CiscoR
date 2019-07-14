@@ -48,6 +48,13 @@ class UsuariosController extends Controller
             $persona->email = $request->email;
             $persona->telefono = $request->telefono;
             $persona->usuario = $request->usuario;
+      
+      $persona->apellido = $request->apellido;
+      $persona->cargo = $request->cargo;
+      $persona->pais = $request->pais;
+      $persona->extension = $request->extension;
+      $persona->idioma = $request->idioma;
+      
             $persona->password = bcrypt( $request->password);
             $persona->condicion = '1';      
             $persona->save();
@@ -63,6 +70,12 @@ class UsuariosController extends Controller
             $persona->email = $request->email;
             $persona->telefono = $request->telefono;
             $persona->usuario = $request->usuario;
+      $persona->apellido = $request->apellido;
+      $persona->cargo = $request->cargo;
+      $persona->pais = $request->pais;
+      $persona->extension = $request->extension;
+      $persona->idioma = $request->idioma;
+      
             $persona->password = bcrypt( $request->password);
             $persona->condicion = '1';      
             $persona->save();

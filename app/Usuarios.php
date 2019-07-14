@@ -10,7 +10,7 @@ class Usuarios extends Model
   protected $table= 'users';
   protected $primaryKey='id';
     protected $fillable = [
-        'idrol', 'nombre', 'telefono', 'email','usuario','password', 'condicion',
+        'idrol', 'nombre', 'telefono', 'email','usuario','password', 'condicion','apellido','cargo','pais','extension','idioma',
     ];
   
   

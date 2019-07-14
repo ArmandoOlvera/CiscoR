@@ -72,8 +72,13 @@
                                                     <th>Herramientas</th>
                                                      <th>Rol</th>
                                                     <th>Nombre</th>
+                                                  <th>Apellidos</th>
                                                     <th>Telefono</th>
+                                                  <th>Extension</th>
                                                     <th>Email</th>
+                                                  <th>Pais</th>
+                                                  <th>Cargo</th>
+                                                  <th>Idioma</th>
                                                    <!----- <th>Contraseña</th>--->
                                                     <th>Condición</th>
                                                 </tr>
@@ -102,8 +107,13 @@
                                                         </div>
                                                       </td>
                                                   <td v-text="usuario.nombre"> </td>
+ <td v-text="usuario.apellido"> </td>
                                                     <td v-text="usuario.telefono"> </td>
+ <td v-text="usuario.extension"> </td>
                                                      <td v-text="usuario.email"> </td>
+ <td v-text="usuario.pais"> </td>
+ <td v-text="usuario.cargo"> </td>
+ <td v-text="usuario.idioma"> </td>
                                                    <!----  <td v-text="usuario.password"> </td>---->
                                                    <td  >
                                                    <div v-if="usuario.condicion == 1">
@@ -173,8 +183,8 @@
                                             </div>----->
                                         </div>
                                         <div class="col-md-4 mb-3">
-                                            <label for="validationCustom02">Nombre Completo</label>
-                                            <input type="text" class="form-control" id="nombre" v-model="nombre" placeholder="Ej: Mario Maganda Martagon"  required="">
+                                            <label for="validationCustom02">Nombre </label>
+                                            <input type="text" class="form-control" id="nombre" v-model="nombre" placeholder="Ej: Machucho Hiram"  required="">
                                             <div class="valid-feedback">
                                                Buen nombre!
                                             </div>
@@ -182,7 +192,25 @@
                                                Porfavor ingrese un nombre.
                                             </div>
                                         </div>
-                                        <div class="col-md-4 mb-3">
+                                      
+                                      <div class="col-md-4 mb-3">
+                                            <label for="validationCustom02">Apellidos </label>
+                                            <input type="text" class="form-control" id="apellido" v-model="apellido" placeholder="Ej: Perez Cadena"  required="">
+                                            <div class="valid-feedback">
+                                               Correcto!
+                                            </div>
+                                           <div class="invalid-feedback">
+                                               Porfavor ingrese los apellidos.
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                      
+                      
+                      
+                      
+                       <div class="form-row">
+                         <div class="col-md-3 mb-3">
                                             <label for="validationCustom02">Telefono</label>
                                             <input type="text" class="form-control" id="telefono" v-model="telefono" placeholder="Ej: 8341234567"  maxlength="10" required="">
                                             <div class="valid-feedback">
@@ -192,9 +220,46 @@
                                                Porfavor ingrese un telefono.
                                             </div>
                                         </div>
-                                    </div>
+                         
+                         <div class="col-md-3 mb-3">
+                                            <label for="validationCustom02">Extension</label>
+                                            <input type="text" class="form-control" id="extension" v-model="extension" placeholder="Ej: extension"  maxlength="10" required="">
+                                            <div class="valid-feedback">
+                                               Correcto!
+                                            </div>
+                                           <div class="invalid-feedback">
+                                               Porfavor ingrese una extension.
+                                            </div>
+                                        </div>
+                         <div class="col-md-3 mb-3"> 
+                                            <label for="rol" class="">Idioma</label>
+                                          <template>
+                                           <select v-model="idioma"  class="form-control">
+                                              
+                                                 <option value="Espanol"  :selected="true" >Español</option>
+                                                       <option value="Ingles"   >Ingles</option>
+                                                <option value="Mandarin"   >Mandarín</option>
+                                             
+                                              </select> 
+                                          </template> 
+                                        </div>
+                          <div class="col-md-3 mb-3"> 
+                                            <label for="rol" class="">Cargo</label>
+                                          <template>
+                                           <select v-model="cargo"  class="form-control"> 
+                                                 <option value="Docente"  :selected="true" >Docente</option>
+                                                       <option value="Rector"   >Rector</option>
+                                                <option value="Director"   >Director</option>
+                                             
+                                              </select> 
+                                          </template> 
+                                        </div>
+                      </div>
+                      
+                      
+                      
                                     <div class="form-row">
-                                        <div class="col-md-6 mb-3">
+                                        <div class="col-md-3 mb-3">
                                             <label for="validationCustom03">Email</label>
                                             <input type="email" class="form-control" id="email" v-model="email" placeholder="Ej: hola@ejemplo.com" required="">
                                           <div class="valid-feedback">
@@ -202,6 +267,16 @@
                                             </div>  
                                           <div class="invalid-feedback">
                                                 Por favor ingrese un correo electronico correcto.
+                                            </div>
+                                        </div>
+                                       <div class="col-md-3 mb-3">
+                                            <label for="validationCustom03">Pais</label>
+                                            <input type="text" class="form-control" id="pais" v-model="pais" placeholder="Ej: pais" required="">
+                                          <div class="valid-feedback">
+                                               Correcto!
+                                            </div>  
+                                          <div class="invalid-feedback">
+                                                 Porfavor ingrese un pais.
                                             </div>
                                         </div>
                                        <div class="col-md-3 mb-3">
@@ -268,6 +343,11 @@
         usuario: '',
         password: '',
         condicion: 0,
+        apellido:'',
+        pais:'',
+        extension:'',
+        idioma:'',
+        cargo:'',
         arrayUsuarios: [],
         modal:0,
         tituloModal:'',
@@ -454,7 +534,12 @@ console.log(this.nombre);
                     'nombre': this.nombre,
                     'telefono': this.telefono,
                     'email': this.email,
-                    'password': this.password
+                    'password': this.password,
+                   'apellido': this.apellido,
+        'pais': this.pais,
+        'extension':this.extension,
+        'idioma':this.idioma,
+        'cargo': this.cargo,
                 }).then(function (response) {
                     me.cerrarModal();
                   me.listarUsuarios(1,'','nombre');
@@ -471,7 +556,12 @@ console.log(this.nombre);
                     'nombre': this.nombre,
                     'telefono': this.telefono,
                     'email': this.email,
-                    'password': this.password
+                    'password': this.password,
+                  'apellido': this.apellido,
+        'pais': this.pais,
+        'extension':this.extension,
+        'idioma':this.idioma,
+        'cargo': this.cargo,
                 }).then(function (response) {
                     me.cerrarModal();
                     me.listarUsuarios(1,'','nombre');
@@ -500,7 +590,12 @@ console.log(this.nombre);
                 this.telefono='';
                 this.email='';
                 this.usuario='';
-                this.password='';
+                this.password='';    
+                this.apellido='';
+        this.pais='';
+        this.extension='';
+        this.cargo='';
+        this.idioma='';
                 this.tipoAccion = 1;
                 this.tituloModal='Registrar Usuario'
                 break;
@@ -516,6 +611,11 @@ console.log(this.nombre);
                 this.usuario=data['usuario'];
                 this.nombre=data['nombre'];
                 this.email=data['email'];
+                    this.apellido=data['apellido'];
+        this.pais=data['pais'];
+        this.extension=data['extension'];
+        this.cargo=data['cargo'];
+        this.idioma=data['idioma'];
                 this.password='';  
                                 break;
               } 

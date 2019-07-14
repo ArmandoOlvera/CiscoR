@@ -28,7 +28,12 @@ class CreateUsersTable extends Migration
           $table->increments('id');
           $table->integer('idrol')->unsigned()->nullable();
          $table->string('nombre',100);
+        $table->string('apellido',100);
+        $table->string('cargo',50);
+        $table->string('pais',50);
            $table->string('telefono',20);
+        $table->string('extension',20); 
+        $table->string('idioma',20);
             $table->string('email',50);
         $table->string('usuario')->unique();;
           $table->string('password',64);
@@ -44,6 +49,13 @@ class CreateUsersTable extends Migration
           $table->integer('id_usuario')->unsigned()->nullable();
          $table->string('nombre',100);
            $table->string('direccion',60); 
+         $table->string('direccion2',60);
+         $table->string('pais',60); 
+         $table->string('estado',60); 
+         $table->string('ciudad',60); 
+         $table->string('codigo',60); 
+         $table->string('url',60); 
+         $table->string('institucion',60); 
           $table->boolean('condicion')->default(1);
           $table->timestamps(); 
           $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
