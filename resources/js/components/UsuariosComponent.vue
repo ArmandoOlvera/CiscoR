@@ -4,7 +4,10 @@
                     <div class="app-main__inner">
                        <!---AQUI VA EL TITULO DE LA PAGINA----> 
                        <div class="app-page-title">
+                 
+  
                             <div class="page-title-wrapper">
+                              
                                 <div class="page-title-heading">
                                     <div class="page-title-icon">
                                         <i class="pe-7s-rocket icon-gradient bg-mean-fruit">
@@ -24,7 +27,7 @@
                     <div class="col-lg-12">
                  
                                 <div class="main-card mb-3 card">
-                                    <div class="card-body"><h5 class="card-title">Table de Usuarios</h5>
+                                    <div class="card-body"><h5 class="card-title">Tabla de Usuarios</h5>
                                       
                                       
 
@@ -33,6 +36,33 @@
  Nuevo
   <span class="badge badge-light">USUARIO</span>
 </button>
+                                      <!--------------BARRA DE BUSQUEDA----------------->
+                                      <br>
+                                       <div class="col-lg-12">
+                                           <!--------SEccion del selector de elementos de busqueda---------->
+                                         <div class="col-mb-4">
+                                           <label><span>Buscar por:</span></label>
+                                         <select    class="  btn btn-focus"   v-model="criterio">
+                                                <option    class="dropdown-item">nombre</option>
+                                                <option    class="dropdown-item">telefono</option> 
+                                            </select>
+                                            </div>
+                                          <!------------------>
+                                         <br>
+                                          <div class="col-mb-8" style="position: relative;">
+                                        <div class="search-wrapper active">
+                                          <div class="input-holder">
+                                            <input type="text" v-model="buscar" @keyup.enter="listarUsuarios(1,buscar,criterio)" placeholder="Escriba para buscar registros" class="search-input">
+                                            <button  type="submit" class="search-icon" @click="listarUsuarios(1,buscar,criterio)">
+                                              <span>
+                                              </span>
+                                            </button>
+                                          </div>  
+                                         </div>
+                                          </div>
+                                         </div>
+                                      <br>
+                                      <!------------------------------->
                                       
                                       
                                       <div class="table-responsive">
@@ -51,7 +81,16 @@
                                                 <tbody>
                                                 <tr v-for=" usuario in arrayUsuarios" :key="usuario.id">
                                                      <th scope="row">
-                                                      <button type="button" class="mb-2 mr-2 btn btn-danger"><i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i>Borrar</button>
+                                                       <template v-if="usuario.condicion">
+                                      <button type="button" class="mb-2 mr-2 btn btn-success"  @click="desactivarUsuario(usuario.id)"><i class="pe-7s-sun"> </i>Desactivar </button> 
+                                                <i class="icon-trash"></i>
+                                            </button>
+                                        </template>
+                                        <template v-else>
+ <button type="button" class="mb-2 mr-2 btn btn-danger"  @click="activarUsuario(usuario.id)"><i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i>Activar</button>
+                                            
+                                        </template>
+                                                     
                                                       <button type="button" class="mb-2 mr-2 btn btn-warning" @click="abrirModal('usuario','actualizar', usuario)"><i class="fa fa-fw" aria-hidden="true" title="Copy to use pencil-square"></i>Modificar</button>
                                                     </th>
                                                     <td  >
@@ -85,13 +124,15 @@
                                  <div class="card-body"><h5 class="card-title">Otros resultados</h5>
                                         <nav class="" aria-label="Page navigation example">
                                             <ul class="pagination">
-                                                <li class="page-item"><a href="javascript:void(0);" class="page-link" aria-label="Previous"><span aria-hidden="true">«</span><span class="sr-only">Previous</span></a></li>
-                                                <li class="page-item"><a href="javascript:void(0);" class="page-link">1</a></li>
-                                                <li class="page-item active"><a href="javascript:void(0);" class="page-link">2</a></li>
-                                                <li class="page-item"><a href="javascript:void(0);" class="page-link">3</a></li>
-                                                <li class="page-item"><a href="javascript:void(0);" class="page-link">4</a></li>
-                                                <li class="page-item"><a href="javascript:void(0);" class="page-link">5</a></li>
-                                                <li class="page-item"><a href="javascript:void(0);" class="page-link" aria-label="Next"><span aria-hidden="true">»</span><span class="sr-only">Next</span></a></li>
+                                                <li class="page-item" v-if="pagination.current_page >1">
+                                                  <a href="#" class="page-link" @click="cambiarPagina(pagination.current_page-1,buscar,criterio)" aria-label="Previous"><span aria-hidden="true">«</span><span class="sr-only">Anteriors</span></a>
+                                              </li>
+                                                <li class="page-item" v-for="page in pagesNumber" :key="page" :class="[page == isActived ? 'active' : '']">
+                                                  <a href="#" class="page-link" @click.prevent="cambiarPagina(page,buscar,criterio)" v-text="page"></a>
+                                              </li>
+                                                <li class="page-item" v-if="pagination.current_page < pagination.last_page">
+                                                  <a href="#" @click="cambiarPagina(pagination.current_page+1,buscar,criterio)" class="page-link" aria-label="Next"><span aria-hidden="true">»</span><span class="sr-only">Siguiente</span></a>
+                                              </li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -116,18 +157,20 @@
                                     <div class="form-row">
                                         <div class="col-md-4 mb-3"> 
                                             <label for="rol" class="">Select</label>
+                                          <template>
                                            <select v-model="idrol"  class="form-control">
-                                             <option disabled value="" selected>Please select one</option>
+                                              <option value="0" :selected="true" >Selecciona una opción</option>
                                                 <option v-for="option in options" v-bind:value="option.value">
                                                   {{ option.text }}
                                                 </option>
                                               </select> 
-                                            <div class="valid-feedback">
+                                          </template>
+                                           <!------- <div class="valid-feedback">
                                                 Correcto!
                                             </div>
                                           <div class="invalid-feedback">
                                                Porfavor ingrese un rol.
-                                            </div>
+                                            </div>----->
                                         </div>
                                         <div class="col-md-4 mb-3">
                                             <label for="validationCustom02">Nombre Completo</label>
@@ -230,28 +273,181 @@
         tituloModal:'',
         tipoAccion:0,
         usuario_id:0,
-        
+         pagination : {
+                    'total' : 0,
+                    'current_page' : 0,
+                    'per_page' : 0,
+                    'last_page' : 0,
+                    'from' : 0,
+                    'to' : 0,
+                },
+                offset : 3,
+        criterio:'nombre',
+        buscar: '',
       }
     },
+     computed:{
+            isActived: function(){
+                return this.pagination.current_page;
+            },
+            //Calcula los elementos de la paginación
+            pagesNumber: function() {
+                if(!this.pagination.to) {
+                    return [];
+                }
+                
+                var from = this.pagination.current_page - this.offset; 
+                if(from < 1) {
+                    from = 1;
+                }
+
+                var to = from + (this.offset * 2); 
+                if(to >= this.pagination.last_page){
+                    to = this.pagination.last_page;
+                }  
+
+                var pagesArray = [];
+                while(from <= to) {
+                    pagesArray.push(from);
+                    from++;
+                }
+                return pagesArray;             
+
+            }
+        },
+    
     methods: {
-      listarUsuarios() {
+      listarUsuarios(page,buscar,criterio) {
         let me = this;
-        axios.get('/usuario').then(function(response) {
-            // handle success
-            //console.log(response);
-            me.arrayUsuarios = response.data;
+        var url= '/usuario?page=' + page + '&buscar='+ buscar + '&criterio='+ criterio;;
+        axios.get(url).then(function(response) {
+          //me.arrayUsuarios=response.data;
+            var respuesta= response.data;
+                    me.arrayUsuarios = respuesta.usuarios.data; 
+            me.pagination= respuesta.pagination;
           })
           .catch(function(error) {
             // handle error
             console.log(error);
           });
       },
+      activarUsuario(id){
+         const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: 'btn btn-success',
+    cancelButton: 'btn btn-danger'
+  },
+  buttonsStyling: false,
+})
+
+swalWithBootstrapButtons.fire({
+  title: 'Estas seguro de acttivar el usuario?',
+  text: "Puedes cambiar esto después",
+  type: 'warning',
+  showCancelButton: true,
+  confirmButtonText: 'Aceptar!',
+  cancelButtonText: 'No, cancelar!',
+  reverseButtons: true
+}).then((result) => {
+  
+  if (result.value) {
+    let me = this;
+                    axios.put('/usuario/activar',{
+                        'id': id
+                    }).then(function (response) {
+                         me.listarUsuarios(1,'','nombre');
+                        swal(
+                        'Activado!',
+                        'El registro ha sido activado con éxito.',
+                        'success'
+                        )
+                    }).catch(function (error) {
+                        console.log(error);
+                    });
+    swalWithBootstrapButtons.fire(
+      'Activado!',
+      'El usuario ha sido activado.',
+      'success'
+    )
+  } else if (
+    
+    // Read more about handling dismissals
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    swalWithBootstrapButtons.fire(
+      
+      'Cancelado',
+      'No se ha realizado ningun cambio',
+      'error'
+    )
+  }
+})
+            },
+      desactivarUsuario(id){
+         const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: 'btn btn-success',
+    cancelButton: 'btn btn-danger'
+  },
+  buttonsStyling: false,
+})
+
+swalWithBootstrapButtons.fire({
+  title: 'Estas seguro de desactivar el usuario?',
+  text: "Puedes volver a activarlo despuès",
+  type: 'warning',
+  showCancelButton: true,
+  confirmButtonText: 'Aceptar!',
+  cancelButtonText: 'No, cancelar!',
+  reverseButtons: true
+}).then((result) => {
+  
+  if (result.value) {
+    let me = this;
+                    axios.put('/usuario/desactivar',{
+                        'id': id
+                    }).then(function (response) {
+                        me.listarUsuarios(1,'','nombre');
+                        swal(
+                        'Activado!',
+                        'El registro ha sido activado con éxito.',
+                        'success'
+                        )
+                    }).catch(function (error) {
+                        console.log(error);
+                    });
+    swalWithBootstrapButtons.fire(
+      'Desactivado!',
+      'El usuario ha sido desactivado.',
+      'success'
+    )
+  } else if (
+    
+    // Read more about handling dismissals
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    swalWithBootstrapButtons.fire(
+      
+      'Cancelado!',
+      'No se ha realizado ningun cambio',
+      'error'
+    )
+  }
+})
+            }
+      ,
+      cambiarPagina(page,buscar,criterio){
+                let me = this;
+                //Actualiza la página actual
+                me.pagination.current_page = page;
+                //Envia la petición para visualizar la data de esa página
+                me.listarUsuarios(page,buscar,criterio);
+            },
        actualizarUsuario(){
              
                 let me = this;
 console.log(this.nombre);
-                axios.put('/usuario/actualizar',{
-                  
+                axios.put('/usuario/actualizar',{ 
                      'idrol': this.idrol,
                    'id': this.usuario_id,
                   'usuario':this.usuario,
@@ -261,11 +457,12 @@ console.log(this.nombre);
                     'password': this.password
                 }).then(function (response) {
                     me.cerrarModal();
-                    me.listarUsuarios();
+                  me.listarUsuarios(1,'','nombre');
                 }).catch(function (error) {
                     console.log(error);
                 }); 
             },
+              
       registrarUsuario(){
                 let me = this;
                 axios.post('/usuario/registrar',{
@@ -277,7 +474,7 @@ console.log(this.nombre);
                     'password': this.password
                 }).then(function (response) {
                     me.cerrarModal();
-                    me.listarUsuarios();
+                    me.listarUsuarios(1,'','nombre');
                 }).catch(function (error) {
                     console.log(error);
                 });
@@ -319,8 +516,7 @@ console.log(this.nombre);
                 this.usuario=data['usuario'];
                 this.nombre=data['nombre'];
                 this.email=data['email'];
-                this.password=''; 
-                this.tituloModal='Registrar Usuario'
+                this.password='';  
                                 break;
               } 
             }
@@ -329,7 +525,7 @@ console.log(this.nombre);
       }
     },
     mounted() {
-      this.listarUsuarios();
+      this.listarUsuarios(1,this.buscar,this.criterio);
       var id = document.getElementById("id").value;
       var nombre = document.getElementById("nombre").value;
       console.log('Component mounted, el usuario es ' + nombre + " con el id " + id);

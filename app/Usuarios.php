@@ -14,8 +14,9 @@ class Usuarios extends Model
     ];
   
   
-/*
-  public function rol(){
-     return $this->belongsTo('App\Rol');
-  */
+
+  public function academias(){
+     return $this->hasMany('App\Academias');
+  
+}
 }

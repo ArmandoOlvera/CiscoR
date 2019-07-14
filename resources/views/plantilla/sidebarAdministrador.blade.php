@@ -179,12 +179,12 @@
                                         Usuarios
                                     </a>
                                 </li>
-                               <li @click="menu=2"  >
+                              <!------- <li @click="menu=2"  >
                                      <a  >
                                         <i class="metismenu-icon pe-7s-user"></i>
                                         Roles
                                  </a>
-                                </li>
+                                </li>------>
                               <li @click="menu=3" >
                                     <a  >
                                         <i class="metismenu-icon pe-7s-home"></i>
@@ -203,13 +203,14 @@
                                         Instructores
                                    </a>
                                 </li>
-                          <!---    <li  @click="menu=7">
                               <li  @click="menu=6">
                                      <a  >
                                         <i class="metismenu-icon pe-7s-portfolio"></i>
                                         Materias
                                   </a>
                                 </li>
+                          <!---    <li  @click="menu=7">
+                              
                                     <a  >
                                         <i class="metismenu-icon pe-7s-study"></i>
                                         Alumnos

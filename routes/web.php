@@ -51,6 +51,13 @@ Route::group(['middleware'=>['auth']],function(){
       Route::put('/usuario/actualizar', 'UsuariosController@update');
       Route::put('/usuario/desactivar', 'UsuariosController@desactivar');
       Route::put('/usuario/activar', 'UsuariosController@activar');
+  
+  //SEccion de las academias
+  Route::get('/academia', 'AcademiaController@index');
+    Route::post('/academia/registrar', 'AcademiaController@store');
+      Route::put('/academia/actualizar', 'AcademiaController@update');
+      Route::put('/academia/desactivar', 'AcademiaController@desactivar');
+      Route::put('/academia/activar', 'AcademiaController@activar');
 });
 
 //solo para debugear por ahora, quitar despues

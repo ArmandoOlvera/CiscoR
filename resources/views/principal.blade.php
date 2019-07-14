@@ -22,6 +22,7 @@ window.onerror=silentErrorHandler;
   border-width: 5px;
 }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
@@ -85,12 +86,13 @@ window.onerror=silentErrorHandler;
                 </span>
             </div>    <div class="app-header__content">
                 <div class="app-header-left">
+                  
                     <div class="search-wrapper">
-                        <div class="input-holder">
+                        <!-----<div class="input-holder">
                             <input type="text" class="search-input" placeholder="Type to search">
                             <button class="search-icon"><span></span></button>
                         </div>
-                        <button class="close"></button>
+                        <button class="close"></button>----->
                     </div>
                    <!---- <ul class="header-menu nav">
                         <li class="nav-item">

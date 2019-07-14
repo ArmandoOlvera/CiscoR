@@ -20,9 +20,7 @@
 
 
 <template v-if="menu==3">
-  <h1>
-    Academias
-  </h1> 
+  <academias-component></academias-component>
 </template>
 
 
